@@ -6,6 +6,6 @@ void main(List<String> args) async {
     await buildShaderBundleJson(
         buildInput: config,
         buildOutput: output,
-        manifestFileName: 'shaders/TestLibrary.shaderbundle.json');
+        manifestFileName: 'renderer.shaderbundle.json');
   });
 }

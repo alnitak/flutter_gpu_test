@@ -1,0 +1,10 @@
+{
+    "ColorsVertex": {
+        "type": "vertex",
+        "file": "shaders/simple.vert"
+    },
+    "ColorsFragment": {
+        "type": "fragment",
+        "file": "shaders/simple.frag"
+    }
+}

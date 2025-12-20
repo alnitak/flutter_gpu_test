@@ -89,10 +89,10 @@ class SurfacePainter extends CustomPainter {
         gpu.StorageMode.devicePrivate, size.width.toInt(), size.height.toInt(),
         enableRenderTargetUsage: true,
         enableShaderReadUsage: true,
-        coordinateSystem: gpu.TextureCoordinateSystem.renderToTexture)!;
+        coordinateSystem: gpu.TextureCoordinateSystem.renderToTexture);
 
     final renderTarget = gpu.RenderTarget.singleColor(
-        gpu.ColorAttachment(texture: texture!, clearValue: Colors.lightBlue));
+        gpu.ColorAttachment(texture: texture!));
 
     commandBuffer = gpu.gpuContext.createCommandBuffer();
     renderPass = commandBuffer.createRenderPass(renderTarget);
@@ -111,7 +111,7 @@ class SurfacePainter extends CustomPainter {
       1, -1, // 2nd triangle bottom right
     ]);
     final verticesDeviceBuffer = gpu.gpuContext
-        .createDeviceBufferWithCopy(ByteData.sublistView(vertices))!;
+        .createDeviceBufferWithCopy(ByteData.sublistView(vertices));
 
     renderPass.bindPipeline(pipeline);
 

@@ -4,8 +4,8 @@ import 'package:flutter_gpu_shaders/build.dart';
 void main(List<String> args) async {
   await build(args, (config, output) async {
     await buildShaderBundleJson(
-        buildConfig: config,
+        buildInput: config,
         buildOutput: output,
-        manifestFileName: 'renderer.shaderbundle.json');
+        manifestFileName: 'shaders/TestLibrary.shaderbundle.json');
   });
 }
